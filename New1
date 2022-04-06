@@ -1,1 +1,19 @@
-nksdnfahsovoasddfdfjaljfl
+## ---------------
+## triggers | cron
+## ---------------
+pipeline {
+    agent { label 'test' }
+    triggers {
+        cron('* * * * *')
+    }
+    stages {
+        stage('hello') {
+            steps {
+                echo "Hello World!"
+            }
+        }
+    }
+}
+Trigger the pipeline manually for the 1st time.
+
+
